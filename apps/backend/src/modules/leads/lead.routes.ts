@@ -7,6 +7,7 @@ import {
   deleteLead,
 } from './lead.controller.js';
 
+
 const router = Router();
 
 router.use(authMiddleware);
@@ -15,5 +16,7 @@ router.post('/', createLead);
 router.get('/', getLeads);
 router.put('/:id', updateLead);
 router.delete('/:id', deleteLead);
+
+
 
 export default router;

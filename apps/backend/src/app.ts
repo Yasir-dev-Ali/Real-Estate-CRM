@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import 'dotenv/config';
 import router from './routes/routes.js';
 import connectDB from "../src/db/index.js"
+import leadRoutes from './modules/leads/lead.routes.js';
 
 
 
@@ -27,6 +28,6 @@ connectDB();
 app.use('/api', router);
 
 // Lead Management
-app.use('/api/leads', router);
+app.use('/api/leads', leadRoutes);
 
 export default app;
